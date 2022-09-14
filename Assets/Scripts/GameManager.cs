@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public Text announcerText;
     public TextMeshProUGUI  FieldGoalChance;
     public GameObject FourthDownCanvas;
+    public GameObject EndOfQuarterCanvas;
     public bool fourthdownBool;
     public bool cancel4thdownPopUp;
 
@@ -290,7 +291,8 @@ public class GameManager : MonoBehaviour
         {
             defenseplay5.SpawnDefense();
         }
-        //announcerText.text = "Pass Complete to " + "It is now " + down + " and " + yardsToGo.ToString("F0") + " to go at the " + yardLine.ToString("F0") + " yard line.";
+        GameObject GM = GameObject.Find("GameManager");
+        GM.GetComponent<gamestart>().startMask = 375;
     }
 
     void spawnWR(GameObject wr, string name, float x, float y, float z, float speed, string routeType, string routeDirection) //make code to streamline this
@@ -433,7 +435,6 @@ public class GameManager : MonoBehaviour
     public void HBcounter()
     {
         currentplay = hbcounter;
-        //nextplay();
     }
 
     public void HBstretch()

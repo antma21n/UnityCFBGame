@@ -65,7 +65,7 @@ public class Dline : MonoBehaviour
         }
         //again I wanna stop using tags but idk how
         if (unblockable == false) {
-            if (other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("OLine"))
             {
                 if (other.gameObject.GetComponent<Oline>().winner == false)
                 {

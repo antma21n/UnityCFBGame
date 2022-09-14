@@ -14,13 +14,18 @@ public class GameClock : MonoBehaviour
     public int Quarter;
     public bool halftime = false;
     public bool endOfGame = false;
+    public Text timeoutText;
+    public int timeoutsRemaining = 3;
+    public GameObject EndOfQuarterCanvas;
+    public GameObject HalfTimeCanvas;
 
     private void Start()
     {
         // Starts the timer automatically
+        timeoutText.text = "Time Out: "+timeoutsRemaining+"/3";
         snaptimerIsRunning = true;
         quartertimerIsRunning = false;
-        //Quarter = 1;
+        Quarter = 1;
     }
 
     void Update()
@@ -33,32 +38,33 @@ public class GameClock : MonoBehaviour
             quartertimerIsRunning = true;
         } else 
         {
-            //TEMP FOR NOW. IF QUARTER TIME = 0 GAME ENDS.
             if (quartertimeRemaining <= 0) {
-                endOfGame = true;
                 quartertimerIsRunning = false;
-                //quartertimeRemaining = 180;
-                //Quarter = Quarter + 1;
+                quartertimeRemaining = 180; //temp
+                Quarter = Quarter + 1;
+                if (Quarter > 4)
+                {
+                    endOfGame = true;
+                }
+                if (Quarter == 3)
+                {
+                    //
+                    GM.GetComponent<GameManager>().down = 1;
+                    GM.GetComponent<GameManager>().yardsToGo = 10;
+                    GM.GetComponent<GameManager>().yardLine = 25;
+                    //GM.GetComponent<GameManager>().opponentYardLine = 75;
+                    HalfTimeCanvas.SetActive(true);
+                }
+                else
+                {
+                    EndOfQuarterCanvas.SetActive(true);
+                }
+                snaptimerIsRunning = false;
+                
+                snaptimeRemaining = 40;
             }
 
         }
-        // else
-        // {
-        //     if (quartertimeRemaining <= 0)
-        //     {
-        //         //POP UP quarter END. 
-        //         Debug.Log("End of Quarter");
-        //         quartertimeRemaining = 180;
-
-        //         if (Quarter == 1)
-        //         {
-        //             //End of Half
-        //             halftime = true;
-        //             Debug.Log("Halftime");
-
-        //         }
-        //     }
-        // }
 
         if (snaptimerIsRunning)
         {
@@ -74,7 +80,9 @@ public class GameClock : MonoBehaviour
             if (quartertimeRemaining > 0) {
                 quartertimeRemaining -= Time.deltaTime;
             } else {
+                //GM.GetComponent<GameManager>().nextplay();
                 quartertimeRemaining = 0;
+                quartertimerIsRunning = false;
             }
         }
     }
@@ -91,6 +99,23 @@ public class GameClock : MonoBehaviour
         {
             gametimeText.text = "Q" + Quarter + " " + string.Format("{0:00}:{1:00}", Minutes, Seconds);
         }
+    }
+
+    public void TimeOutButton()
+    {
+        if (timeoutsRemaining > 0)
+        {
+            timeoutsRemaining = timeoutsRemaining - 1;
+            //update text
+            timeoutText.text = "Time Out: "+timeoutsRemaining+"/3";
+            snaptimeRemaining = 150;
+            quartertimerIsRunning = false;
+        }
+    }
+
+    public void EndofQuarterButton()
+    {
+        snaptimerIsRunning = true;
     }
 
 }

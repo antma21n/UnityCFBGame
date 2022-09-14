@@ -12,6 +12,8 @@ public class gamestart : MonoBehaviour
     public bool runplay = false;
     //private bool timeBool;
     public GameObject RB_withball;
+    public bool changingPlay;
+    public int startMask = 375;
 
     //public float time = 0;
     //private float timeDelay = 0.0f;
@@ -54,18 +56,18 @@ public class gamestart : MonoBehaviour
             {
                 Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 Debug.Log(Input.mousePosition.y);
-                if (screenPosition[1] < 460) 
+                if (screenPosition[1] < startMask) //&& !changingPlay)
                 {
                     start_game = true;
+                    //hide buttons
                 }
             }
 
         }
     }
 
-    public void gameStopChangePlay()
+    public void isChangingPlay()
     {
-        start_game = false;
+        startMask = 0;
     }
-
 }

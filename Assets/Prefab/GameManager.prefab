@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &940738288802347427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940738288802347425}
+  - component: {fileID: 940738288802347426}
+  - component: {fileID: -4228201134175365055}
+  - component: {fileID: -4390167633272147732}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &940738288802347425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940738288802347427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &940738288802347426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940738288802347427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceee9f565b6a43245a4b73222d580628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DownYardStats: {fileID: 0}
+  Score: {fileID: 0}
+  down: 0
+  yardsToGo: 0
+  yardLine: 0
+  playerScore: 0
+  enemyScore: 0
+  TackleMade: {fileID: 851492355338123495, guid: b82241530fe566a4c997fa72ae24bbfa, type: 3}
+  QB: {fileID: 4275668655559888827, guid: db32f5cfde5fd61489b61150681ce7fd, type: 3}
+  WR: {fileID: 2282140508241179839, guid: fdced738e341a204f8c52fcd87db239f, type: 3}
+  RB: {fileID: 8918034475167837380, guid: 777b48dd01277244ab17f5ba3b7176d9, type: 3}
+  OLine: {fileID: 8458305819088774086, guid: bc7f16710201b5b4a94be7982b80cbb7, type: 3}
+  firstDownMarker: {fileID: 4310961343952540842, guid: 3103c04788983714db6f809a216be867, type: 3}
+  ScrimageLine: {fileID: 9159745229989212988, guid: f1d5d80ce7651784c8dd59acf0331f36, type: 3}
+  endZone: {fileID: 761980465052074302, guid: 037bf7f037b26e14aadd5644c9146d57, type: 3}
+  WR1_x: -8
+  WR1_y: 4
+  WR1_z: 0
+  WR1_speed: 1.75
+  WR1_route: go
+  WR1_dir: +
+  WR2_x: -8
+  WR2_y: 2
+  WR2_z: 0
+  WR2_speed: 1.75
+  WR2_route: go
+  WR2_dir: +
+  WR3_x: -8
+  WR3_y: -3.77
+  WR3_z: 0
+  WR3_speed: 1.75
+  WR3_route: go
+  WR3_dir: +
+  TE_x: -8
+  TE_y: -2
+  TE_z: 0
+  TE_speed: 1.75
+  TE_route: go
+  TE_dir: +
+  RB_x: -9.5
+  RB_y: -0.5
+  RB_z: 0
+  RB_speed: 2.25
+  RB_route: counter
+  RB_dir: +
+  zone_play: 1
+  defenseplay: {fileID: 11400000, guid: 09a733622e9e9f848ae0dd9620be131a, type: 2}
+  defenseplay2: {fileID: 11400000, guid: 1bdb3b3cc0d1c714fa87e4f844e5f1ce, type: 2}
+  defenseplay3: {fileID: 11400000, guid: c0507ea50187dbe458497da7284be479, type: 2}
+  defenseplay4: {fileID: 11400000, guid: 932ccef9fbd5390409f1af504c41c1e5, type: 2}
+  defenseplay5: {fileID: 11400000, guid: 307b173147cf99a4b82f25dc86337359, type: 2}
+  currentplay: {fileID: 11400000, guid: 3df7e6901271d4243ae2831d487eff44, type: 2}
+  hbdive: {fileID: 11400000, guid: f30b430aa5edb714a969bcf1a213ccd4, type: 2}
+  hbinsidetackle: {fileID: 11400000, guid: da7094c23b604f8438c3b35c1d28e701, type: 2}
+  hbofftackle: {fileID: 11400000, guid: ce21dbada45a7974aa290d7b0d2f9efc, type: 2}
+  hbcounter: {fileID: 11400000, guid: 3df7e6901271d4243ae2831d487eff44, type: 2}
+  hbstretch: {fileID: 11400000, guid: 7af9012909873ef4486d4dcca0c7b6aa, type: 2}
+  test: {fileID: 11400000, guid: 78d4bd5e89777ad4db2d432f2d61df70, type: 2}
+  slants: {fileID: 11400000, guid: 49d29548f5dfba74aa998dabfdfbc2b4, type: 2}
+  fourverts: {fileID: 11400000, guid: c05d9155e53e17b428f0aebe04bc258b, type: 2}
+  curls: {fileID: 11400000, guid: 5a70cf0dd18b31040a33e0f66954d035, type: 2}
+  hailMerry: {fileID: 11400000, guid: 0f8c8e6292b58b748a2fae18b4b797e4, type: 2}
+  bench: {fileID: 11400000, guid: 645a65479b022ed4c8ca53fa743406b9, type: 2}
+  stick: {fileID: 11400000, guid: 8c1776bfb7288aa4aa6dffe75aaf4b49, type: 2}
+  flood: {fileID: 11400000, guid: c4348434409273844b3537a8cec18add, type: 2}
+  texas: {fileID: 11400000, guid: 8aea8a4e0858ed94fa51d954d5058d12, type: 2}
+  wheel: {fileID: 11400000, guid: 726b6387c7c22104986fddf774ae115b, type: 2}
+  mesh: {fileID: 11400000, guid: eb65848ff27e0b94d921ae475fb7cde1, type: 2}
+  shotseam: {fileID: 11400000, guid: e3481164df848b644805bd84c1bc3543, type: 2}
+  teAttack: {fileID: 11400000, guid: 2a5fe10a311da4642ae6c23df7434c0e, type: 2}
+  screen: {fileID: 11400000, guid: 3f46cb3890aa10148b34d3d954d31625, type: 2}
+  bubblescreenleft: {fileID: 11400000, guid: 07de4e635f0a5d04aa0624243b53285d, type: 2}
+  bubblescreenright: {fileID: 11400000, guid: 38cb37c905c0ae846a69c681d185de00, type: 2}
+  runplay: 1
+--- !u!114 &-4228201134175365055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940738288802347427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4481942ef6d76724b8e3172243fd3093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start_game: 0
+  runplay: 0
+  RB_withball: {fileID: 2832811087670259259, guid: 5195c7701df681143900b373da68a4ff, type: 3}
+--- !u!114 &-4390167633272147732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940738288802347427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2a55a05b0bc82479157744bdd21b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snaptimeRemaining: 40
+  quartertimeRemaining: 120
+  snaptimerIsRunning: 0
+  quartertimerIsRunning: 0
+  gametimeText: {fileID: 0}
+  snaptimeText: {fileID: 0}
+  Quarter: 0

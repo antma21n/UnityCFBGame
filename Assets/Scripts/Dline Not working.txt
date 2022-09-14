@@ -1,0 +1,83 @@
+//old working file for Dline.cs script
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Dline : MonoBehaviour
+{
+    public GameObject Sack;
+    public GameObject linemenStruggle;
+    public float speed;
+    private List<string> collisions = new List<string>();
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //need a pause to make first block or slow speed to make first block
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (GameObject.Find("QB"))
+        {
+            GameObject qb = GameObject.Find("QB");
+            transform.position = Vector3.MoveTowards(transform.position, qb.transform.position, Time.deltaTime * speed);
+        }
+    }
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    collisions.Add(other.gameObject.name);
+    //    Debug.Log(collisions[0]);
+    //    Debug.Log(collisions[1]);
+    //    //if (collisions.Contains("object1") && collisions.Contains("object2"))
+    //    //Destroy(other.gameObject);
+    //    //Destroy(GameObject.Find(collisions[0]));
+
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    Debug.Log(collisions.Count);
+    //    collisions.Remove(other.gameObject.name);
+    //}
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        collisions.Add(other.gameObject.name);
+        Debug.Log(collisions.Count);
+        if (other.gameObject.CompareTag("QB"))
+        {
+            GameObject qb = GameObject.Find("QB");
+            //dont sack when ball is thrown or when ball is in another players hands (trying to figure out if or statments)
+            if (!GameObject.Find("Football")) //|| (!GameObject.Find("WR with Ball")) || (!GameObject.Find("DB with Ball")))
+            {
+                Destroy(gameObject);
+                //Destroy(GameObject.Find(collisions[0]));
+                collisions.Remove(other.gameObject.name);
+                Destroy(other.gameObject);
+                GameObject s = Instantiate(Sack) as GameObject;
+                s.transform.position = transform.position;
+
+                //reset scene
+                ResetScene();
+            }
+        }
+        //again I wanna stop using tags but idk how
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(other);
+            Destroy(gameObject);
+            Destroy(GameObject.Find(collisions[0]));
+            //Destroy(other.gameObject);
+            GameObject lS = Instantiate(linemenStruggle) as GameObject;
+            lS.transform.position = transform.position;
+        }
+    }
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+}

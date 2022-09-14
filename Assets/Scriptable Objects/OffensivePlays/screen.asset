@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa1c5bb3d7284b4186dec56d4153bd4, type: 3}
+  m_Name: screen
+  m_EditorClassIdentifier: 
+  runplay: 0
+  passplay: 1
+  QB_name: QB
+  QB_pos: {x: -9, y: 0, z: 0}
+  RB_name: RB
+  RB_pos: {x: -9.5, y: -0.5, z: 0}
+  RB_speed: 1.75
+  RB_route: wheel
+  RB_dir: '-'
+  WR1_name: WR1
+  WR1_pos: {x: -8, y: 4, z: 0}
+  WR1_speed: 2
+  WR1_route: PCP
+  WR1_dir: '-'
+  WR2_name: WR2
+  WR2_pos: {x: -8, y: 2, z: 0}
+  WR2_speed: 2
+  WR2_route: corner
+  WR2_dir: +
+  WR3_name: WR3
+  WR3_pos: {x: -8, y: -3.77, z: 0}
+  WR3_speed: 2
+  WR3_route: go
+  WR3_dir: +
+  TE_name: TE
+  TE_pos: {x: -8, y: -2, z: 0}
+  TE_speed: 1.75
+  TE_route: post stop
+  TE_dir: +

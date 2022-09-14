@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7357d950595980f4c82e5cf25a4c7ab0, type: 3}
+  m_Name: Cover0
+  m_EditorClassIdentifier: 
+  DE1_name: DE1
+  DE1_pos: {x: 0, y: 0, z: 0}
+  DE1_speed: 0
+  DE1_unblockable: 0
+  DE2_name: 
+  DE2_pos: {x: 0, y: 0, z: 0}
+  DE2_speed: 0
+  DE2_unblockable: 0
+  DT1_name: 
+  DT1_pos: {x: 0, y: 0, z: 0}
+  DT1_speed: 0
+  DT1_unblockable: 0
+  DT2_name: 
+  DT2_pos: {x: 0, y: 0, z: 0}
+  DT2_speed: 0
+  DT2_unblockable: 0
+  LB1_name: 
+  LB1_zoneName: 
+  LB1_pos: {x: 0, y: 0, z: 0}
+  LB1_speed: 0
+  LB1_delay: 0
+  LB1_catchChance: 0
+  LB1_zone_play: 0
+  LB2_name: 
+  LB2_zoneName: 
+  LB2_pos: {x: 0, y: 0, z: 0}
+  LB2_speed: 0
+  LB2_delay: 0
+  LB2_catchChance: 0
+  LB2_zone_play: 0
+  LB3_name: 
+  LB3_zoneName: 
+  LB3_pos: {x: 0, y: 0, z: 0}
+  LB3_speed: 0
+  LB3_delay: 0
+  LB3_catchChance: 0
+  LB3_zone_play: 0
+  CB1_name: 
+  CB1_zoneName: 
+  CB1_pos: {x: 0, y: 0, z: 0}
+  CB1_speed: 0
+  CB1_delay: 0
+  CB1_catchChance: 0
+  CB1_zone_play: 0
+  CB2_name: 
+  CB2_zoneName: 
+  CB2_pos: {x: 0, y: 0, z: 0}
+  CB2_speed: 0
+  CB2_delay: 0
+  CB2_catchChance: 0
+  CB2_zone_play: 0
+  FS_name: 
+  FS_zoneName: 
+  FS_pos: {x: 0, y: 0, z: 0}
+  FS_speed: 0
+  FS_delay: 0
+  FS_catchChance: 0
+  FS_zone_play: 0
+  SS_name: 
+  SS_zoneName: 
+  SS_pos: {x: 0, y: 0, z: 0}
+  SS_speed: 0
+  SS_delay: 0
+  SS_catchChance: 0
+  SS_zone_play: 0
